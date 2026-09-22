@@ -6,5 +6,4 @@
 
 ## W2
 
-[`warmups/week-02/course-check/`](warmups/week-02/course-check/) 是“不影响未来的本节课实验”：把教师默认签名改为自己的公开课程代号，再让同学从另一台机器取得你的 fork，并观察程序是否报告了你的签名。
-
+[`warmups/week-02/course-check/`](warmups/week-02/course-check/) 是一个不影响后续项目的本周工作台。学生在 VS Code 的 WSL Bash 中学习命令与路径，用 uv 恢复并运行项目，再把教师默认签名改为公开课程代号，通过 Git diff 和一条本地 commit 观察版本状态。本周不要求 push。
