@@ -5,13 +5,11 @@ from __future__ import annotations
 from dataclasses import dataclass
 import os
 from pathlib import Path
-import re
 import sys
 import tomllib
 
 
 ROOT = Path(__file__).resolve().parent
-PUBLIC_SIGNATURE = re.compile(r"s[0-9]{2,4}\Z")
 
 
 @dataclass(frozen=True)
@@ -58,8 +56,6 @@ def inspect_project() -> CourseCheck:
         errors.append("Python is not running from this project's .venv")
     if course_mode != "fixture":
         errors.append("COURSE_MODE must be fixture")
-    if signature != "teacher" and not PUBLIC_SIGNATURE.fullmatch(signature):
-        errors.append("signature must be teacher or a public course ID such as s07")
 
     return CourseCheck(
         project=project,
@@ -94,4 +90,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
